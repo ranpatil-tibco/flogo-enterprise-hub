@@ -18,7 +18,7 @@ The Consumer flow has a consumer trigger that listens to the specified topic and
 
 ## Create Kafka Application
 
-1. Install TIBCO Flogo Extention for Visual Studio Code and Create new flogo app in it. 
+1. Install TIBCO Flogo Extension for Visual Studio Code and Create new flogo app in it. 
 
 2. In the newly created Flogo app, go to CONNECTIONS > Create Connection > Apache Kafka Client Configuration..
 
@@ -30,7 +30,7 @@ The Consumer flow has a consumer trigger that listens to the specified topic and
 
 The following details are required to create the Kafka connection:
 
- a. Host - In this field we give public ip/public DNS of EC2 instance on which database is hosted or the ip of VM where the Kafka Brocker is   hosted in tibco premises.
+ a. Host - In this field we give public ip/public DNS of EC2 instance on which database is hosted or the ip of VM where the Kafka Broker is   hosted in tibco premises.
 
  b. Port - Enter the port on which the server is running.
 
@@ -58,7 +58,7 @@ g. Max Retry - The number of attempts to retry metadata requests when the cluste
 
 h. Refresh Frequency - The amount of time in seconds after which metadata is refreshed.
 
-i. Use Schema Registry - Enables you to use the Avro schema with a Schema Registry by selecting True.
+i. useSchemaRegistry - Enables you to use the Avro schema with a Schema Registry by selecting True.
 
 ### The Flows and Commit offset activity
 
@@ -73,7 +73,7 @@ i. Use Schema Registry - Enables you to use the Avro schema with a Schema Regist
 ![The Producer flow](../../../../images/Kafka/ProducerActivityInputTab.png)
 
 
-3. The Consumer flow has the consumer trigger which is listening to the mentioned topic and receives the message whenever it is sent. Further, the 'commit offset' activity notifies the consumer to commit the offset and The final 'Log' activity is prints the received message.
+3. The Consumer flow has the consumer trigger which is listening to the mentioned topic and receives the message whenever it is sent. Further, the 'commit offset' activity notifies the consumer to commit the offset and The final 'Log' activity prints the received message.
 Note: If 'commit offset' activity is not used the consumer commits the offset at the end of the flow.
 
 ![The Consumer flow](../../../../images/Kafka/ConsumerSettingTab.png)
@@ -113,7 +113,7 @@ For running the application,
 
 ## Outputs
 
-1. Verify output by hiting the endpoint
+1. Verify output by hitting the endpoint
 
 ![Verify output in endpoint](../../../../images/Kafka/Hitendpointinbrowser.png)
 
